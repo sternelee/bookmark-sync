@@ -1,8 +1,9 @@
 <template>
   <div>
-    <h1>Side Panel Playground</h1>
-    <TestComponent />
+    <BookmarkManager />
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BookmarkManager from '@/components/bookmarks/BookmarkManager.vue'
+</script>

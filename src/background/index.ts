@@ -26,6 +26,31 @@ chrome.runtime.onInstalled.addListener(async (opt) => {
   }
 })
 
+// Listen for bookmark changes to sync across devices
+chrome.bookmarks.onCreated.addListener((id, bookmark) => {
+  // Handle bookmark creation
+  console.log('Bookmark created:', id, bookmark)
+  // In a real implementation, you would sync this change to your backend
+})
+
+chrome.bookmarks.onRemoved.addListener((id, removeInfo) => {
+  // Handle bookmark removal
+  console.log('Bookmark removed:', id, removeInfo)
+  // In a real implementation, you would sync this change to your backend
+})
+
+chrome.bookmarks.onChanged.addListener((id, changeInfo) => {
+  // Handle bookmark changes
+  console.log('Bookmark changed:', id, changeInfo)
+  // In a real implementation, you would sync this change to your backend
+})
+
+chrome.bookmarks.onMoved.addListener((id, moveInfo) => {
+  // Handle bookmark moves
+  console.log('Bookmark moved:', id, moveInfo)
+  // In a real implementation, you would sync this change to your backend
+})
+
 self.onerror = function (message, source, lineno, colno, error) {
   console.info("Error: " + message)
   console.info("Source: " + source)

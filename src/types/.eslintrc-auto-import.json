@@ -1,5 +1,6 @@
 {
   "globals": {
+    "BookmarkNode": true,
     "Component": true,
     "ComponentPublicInstance": true,
     "ComputedRef": true,
@@ -24,6 +25,7 @@
     "Slots": true,
     "Toast": true,
     "UseComponentIconsProps": true,
+    "UseFileUploadOptions": true,
     "VNode": true,
     "WritableComputedRef": true,
     "acceptHMRUpdate": true,
@@ -63,6 +65,7 @@
     "defineStore": true,
     "eagerComputed": true,
     "effectScope": true,
+    "extendLocale": true,
     "extendRef": true,
     "extractShortcuts": true,
     "formBusInjectionKey": true,
@@ -184,6 +187,7 @@
     "useBase64": true,
     "useBattery": true,
     "useBluetooth": true,
+    "useBookmarksStore": true,
     "useBreakpoints": true,
     "useBroadcastChannel": true,
     "useBrowserLocalStorage": true,
@@ -230,6 +234,7 @@
     "useFetch": true,
     "useFileDialog": true,
     "useFileSystemAccess": true,
+    "useFileUpload": true,
     "useFocus": true,
     "useFocusWithin": true,
     "useFormField": true,

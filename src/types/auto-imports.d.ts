@@ -52,6 +52,7 @@ declare global {
   const eagerComputed: typeof import('@vueuse/core')['eagerComputed']
   const effectScope: typeof import('vue')['effectScope']
   const extPay: typeof import('../utils/payment/extPay')['extPay']
+  const extendLocale: typeof import('../../node_modules/@nuxt/ui/dist/runtime/composables/defineLocale.js')['extendLocale']
   const extendRef: typeof import('@vueuse/core')['extendRef']
   const extractShortcuts: typeof import('../../node_modules/@nuxt/ui/dist/runtime/composables/defineShortcuts.js')['extractShortcuts']
   const firebaseApp: typeof import('../utils/firebase')['firebaseApp']
@@ -198,6 +199,7 @@ declare global {
   const useBase64: typeof import('@vueuse/core')['useBase64']
   const useBattery: typeof import('@vueuse/core')['useBattery']
   const useBluetooth: typeof import('@vueuse/core')['useBluetooth']
+  const useBookmarksStore: typeof import('../stores/bookmarks.store')['useBookmarksStore']
   const useBreakpoints: typeof import('@vueuse/core')['useBreakpoints']
   const useBroadcastChannel: typeof import('@vueuse/core')['useBroadcastChannel']
   const useBrowserLocalStorage: typeof import('../composables/useBrowserStorage')['useBrowserLocalStorage']
@@ -246,6 +248,7 @@ declare global {
   const useFetch: typeof import('@vueuse/core')['useFetch']
   const useFileDialog: typeof import('@vueuse/core')['useFileDialog']
   const useFileSystemAccess: typeof import('@vueuse/core')['useFileSystemAccess']
+  const useFileUpload: typeof import('../../node_modules/@nuxt/ui/dist/runtime/composables/useFileUpload.js')['useFileUpload']
   const useFocus: typeof import('@vueuse/core')['useFocus']
   const useFocusWithin: typeof import('@vueuse/core')['useFocusWithin']
   const useFormField: typeof import('../../node_modules/@nuxt/ui/dist/runtime/composables/useFormField.js')['useFormField']
@@ -387,11 +390,17 @@ declare global {
   export type { Component, Slot, Slots, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue'
   import('vue')
   // @ts-ignore
+  export type { BookmarkNode } from '../stores/bookmarks.store'
+  import('../stores/bookmarks.store')
+  // @ts-ignore
   export type { ShortcutConfig, ShortcutsConfig, ShortcutsOptions } from '../../node_modules/@nuxt/ui/dist/runtime/composables/defineShortcuts.d'
   import('../../node_modules/@nuxt/ui/dist/runtime/composables/defineShortcuts.d')
   // @ts-ignore
   export type { UseComponentIconsProps } from '../../node_modules/@nuxt/ui/dist/runtime/composables/useComponentIcons.d'
   import('../../node_modules/@nuxt/ui/dist/runtime/composables/useComponentIcons.d')
+  // @ts-ignore
+  export type { UseFileUploadOptions } from '../../node_modules/@nuxt/ui/dist/runtime/composables/useFileUpload.d'
+  import('../../node_modules/@nuxt/ui/dist/runtime/composables/useFileUpload.d')
   // @ts-ignore
   export type { KbdKey, KbdKeySpecific } from '../../node_modules/@nuxt/ui/dist/runtime/composables/useKbd.d'
   import('../../node_modules/@nuxt/ui/dist/runtime/composables/useKbd.d')
@@ -446,6 +455,7 @@ declare module 'vue' {
     readonly defineStore: UnwrapRef<typeof import('pinia')['defineStore']>
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
+    readonly extendLocale: UnwrapRef<typeof import('../../node_modules/@nuxt/ui/dist/runtime/composables/defineLocale.js')['extendLocale']>
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
     readonly extractShortcuts: UnwrapRef<typeof import('../../node_modules/@nuxt/ui/dist/runtime/composables/defineShortcuts.js')['extractShortcuts']>
     readonly formBusInjectionKey: UnwrapRef<typeof import('../../node_modules/@nuxt/ui/dist/runtime/composables/useFormField.js')['formBusInjectionKey']>
@@ -567,6 +577,7 @@ declare module 'vue' {
     readonly useBase64: UnwrapRef<typeof import('@vueuse/core')['useBase64']>
     readonly useBattery: UnwrapRef<typeof import('@vueuse/core')['useBattery']>
     readonly useBluetooth: UnwrapRef<typeof import('@vueuse/core')['useBluetooth']>
+    readonly useBookmarksStore: UnwrapRef<typeof import('../stores/bookmarks.store')['useBookmarksStore']>
     readonly useBreakpoints: UnwrapRef<typeof import('@vueuse/core')['useBreakpoints']>
     readonly useBroadcastChannel: UnwrapRef<typeof import('@vueuse/core')['useBroadcastChannel']>
     readonly useBrowserLocalStorage: UnwrapRef<typeof import('../composables/useBrowserStorage')['useBrowserLocalStorage']>
@@ -613,6 +624,7 @@ declare module 'vue' {
     readonly useFetch: UnwrapRef<typeof import('@vueuse/core')['useFetch']>
     readonly useFileDialog: UnwrapRef<typeof import('@vueuse/core')['useFileDialog']>
     readonly useFileSystemAccess: UnwrapRef<typeof import('@vueuse/core')['useFileSystemAccess']>
+    readonly useFileUpload: UnwrapRef<typeof import('../../node_modules/@nuxt/ui/dist/runtime/composables/useFileUpload.js')['useFileUpload']>
     readonly useFocus: UnwrapRef<typeof import('@vueuse/core')['useFocus']>
     readonly useFocusWithin: UnwrapRef<typeof import('@vueuse/core')['useFocusWithin']>
     readonly useFormField: UnwrapRef<typeof import('../../node_modules/@nuxt/ui/dist/runtime/composables/useFormField.js')['useFormField']>

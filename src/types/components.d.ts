@@ -10,6 +10,10 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./../components/AppFooter.vue')['default']
     AppHeader: typeof import('./../components/AppHeader.vue')['default']
+    BookmarksBookmarkManager: typeof import('./../components/bookmarks/BookmarkManager.vue')['default']
+    BookmarksBookmarkSettings: typeof import('./../components/bookmarks/BookmarkSettings.vue')['default']
+    BookmarksBookmarkTree: typeof import('./../components/bookmarks/BookmarkTree.vue')['default']
+    BookmarksBookmarkTreeNode: typeof import('./../components/bookmarks/BookmarkTreeNode.vue')['default']
     DisplayError: typeof import('./../components/state/DisplayError.vue')['default']
     LoadingSpinner: typeof import('./../components/state/LoadingSpinner.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
@@ -18,12 +22,15 @@ declare module 'vue' {
     TailwindEmptyState: typeof import('./../components/state/tailwind-empty-state.vue')['default']
     TestComponent: typeof import('./../components/TestComponent.vue')['default']
     ThemeSwitch: typeof import('./../components/ThemeSwitch.vue')['default']
+    UAlert: typeof import('./../../node_modules/@nuxt/ui/dist/runtime/components/Alert.vue')['default']
     UApp: typeof import('./../../node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
     UButton: typeof import('./../../node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']
     UCard: typeof import('./../../node_modules/@nuxt/ui/dist/runtime/components/Card.vue')['default']
     UForm: typeof import('./../../node_modules/@nuxt/ui/dist/runtime/components/Form.vue')['default']
     UFormField: typeof import('./../../node_modules/@nuxt/ui/dist/runtime/components/FormField.vue')['default']
     UInput: typeof import('./../../node_modules/@nuxt/ui/dist/runtime/components/Input.vue')['default']
+    UModal: typeof import('./../../node_modules/@nuxt/ui/dist/runtime/components/Modal.vue')['default']
+    USelect: typeof import('./../../node_modules/@nuxt/ui/dist/runtime/components/Select.vue')['default']
     USwitch: typeof import('./../../node_modules/@nuxt/ui/dist/runtime/components/Switch.vue')['default']
   }
 }
